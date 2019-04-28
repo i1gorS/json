@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Задание фигуры активной области HTML макету метки</title>
+    <title>ФлайтРадар Антона Саенко</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!--
         Укажите свой API-ключ. Тестовый ключ НЕ БУДЕТ работать на других сайтах.
@@ -94,18 +94,18 @@
 //
 // json read start 
       var json = JSON.parse(data);
-      console.log(data);
+/*      console.log(data);
       for (var i=0; i < json.length; i++)
       {
 
       alert(json[i].latitude);
       }
 
-
+*/
 
 // end json read
 //Yandex maps
-/*ymaps.ready(function() {
+ymaps.ready(function() {
   	var myMap = new ymaps.Map("map", {
     center: [64.90487763104672, 102.36864451367187],
     zoom: 3,
@@ -134,15 +134,15 @@
 });
 
 var objects = [];
-for (var i=0; i < 10; i++){
-
-objects[i] = [{
-  				"id": i,
-  				"coord": [json["latitude"], json["longitude"]],
+for (var i=0; i < json.length; i++){
+console.log(objects)
+objects[i] = {
+  				"id": i+1,
+  				"coord": [Number(json[i].latitude), Number(json[i].longitude)],
   				"count": "28 247"
-				}];  
+				} 
 				}
-*/				
+				
 </script>
 </head>
 <body>

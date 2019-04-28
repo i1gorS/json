@@ -7,7 +7,6 @@
         Укажите свой API-ключ. Тестовый ключ НЕ БУДЕТ работать на других сайтах.
         Получить ключ можно в Кабинете разработчика: https://developer.tech.yandex.ru/keys/
     -->
-    <script type="text/javascript" src="../json/data4.json"></script>
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU&amp;apikey=d8841280-fd00-4670-915e-9e8d9a851530" type="text/javascript"></script>
     <script src="placemark_shape.js" type="text/javascript"></script>
     <head>
@@ -91,27 +90,13 @@
         }
     </style>
      <script>
-//
-// json read start 
-      var json = JSON.parse(data);
-      console.log(data);
-      for (var i=0; i < json.length; i++)
-      {
-
-      alert(json[i].latitude);
-      }
-
-
-
-// end json read
-//Yandex maps
-/*ymaps.ready(function() {
-  	var myMap = new ymaps.Map("map", {
+        ymaps.ready(function() {
+  var myMap = new ymaps.Map("map", {
     center: [64.90487763104672, 102.36864451367187],
     zoom: 3,
     controls:['typeSelector', 'zoomControl'],
     type: 'yandex#satellite'
-});
+  });
 
   var placemarks = [];
 
@@ -133,16 +118,35 @@
   });
 });
 
-var objects = [];
-for (var i=0; i < 10; i++){
-
-objects[i] = [{
-  				"id": i,
-  				"coord": [json["latitude"], json["longitude"]],
-  				"count": "28 247"
-				}];  
-				}
-*/				
+var objects = [{
+  "id": 1,
+  "coord": [69.30829753712302, 33.68074778515625],
+  "count": "28 247"
+}, {
+  "id": 2,
+  "coord": [55.687332864478, 37.63582591015626],
+  "count": "28 247"
+}, {
+  "id": 3,
+  "coord": [43.04116406448006, 40.97566966015626],
+  "count": "28 247"
+}, {
+  "id": 4,
+  "coord": [55.587904555094646, 49.14949778515625],
+  "count": "28 247"
+}, {
+  "id": 5,
+  "coord": [63.21340758709133, 53.324302472656285],
+  "count": "28 247"
+}, {
+  "id": 6,
+  "coord": [61.37246501380297, 89.44734934765621],
+  "count": "28 247"
+}, {
+  "id": 7,
+  "coord": [54.22065999986494, 108.08016184765624],
+  "count": "28 247"
+}];    
 </script>
 </head>
 <body>
